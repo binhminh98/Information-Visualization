@@ -1,0 +1,65 @@
+/* first remove default padding and margins */
+body {margin: 10; padding: 10}
+
+/* the header is the width of the screen and 8% of the height */
+header {width:100%; height:2ex; font-family:sans-serif; color: darkblue; font-size:xx-large; font-weight:bold; border: 1px solid rgb(167, 167, 167); padding:0.5ex; text-align: center}
+
+/* the menubox rule should make it 15% of the screen width, 
+positioned below the header at the right hand side of the screen
+add the rule here... */
+#menubox {position:absolute; top:9%; width:16%; right:1%; border:1px solid rgb(167, 167, 167); font-family:sans-serif; padding:0.2em}
+#menubox2 {position:absolute; top:66%; width:16%; right:1%; border:1px solid rgb(167, 167, 167); font-family:sans-serif; padding:0.2em}
+
+/* if the position of the containing div is not relative and the boxes inside are absolute, a resize problem happens */
+#displayarea {position:relative; width:80%; height:90%; margin:1.5em; border:1px solid rgb(167, 167, 167) }
+
+/* the chartbox class defines the boxes used to display the individual charts */
+div.chartbox {position:absolute; min-width:240px; min-height:135px; border: 1px solid rgb(167, 167, 167); padding:2px; }
+
+/* the highcharts-container fills the chartbox (which is its bounding box) */
+.highcharts-container{width:100%; height:100%;} 
+
+/* rules for the slider elements */
+#sliderbox {position:absolute; height: 2em; top: 50% ;left: 2.5%; bottom: 5%; width:14%; border:1px solid rgb(167, 167, 167); }
+
+#sliderStartVal{position:absolute; width: 2em; height: 2em; line-height: 2em; left: 2em; text-align: center; }
+#sliderEndVal{position:absolute; width: 2em; height: 2em; line-height: 2em; right: 0.2em; text-align: center; }
+
+#slider {position:absolute; height: 1.6em; left: 10%; bottom: 5%; width:77%; }
+#custom-handle {width: 3em; height: 1.6em; bottom: 5%; text-align: center; line-height: 1.6em; margin-top: 0.3em;}
+
+#runSeries {position: absolute; left: 0; font-weight:bold; font-size: large}
+
+/* rules for the slider2 elements */
+#sliderbox2 {position:absolute; height: 2em; top: 95.5% ;left: 2%; bottom: 5%; width:12%; border:1px solid pink; }
+
+#sliderStartVal2{position:absolute; width: 2em; height: 2em; line-height: 2em; left: 2em; text-align: center; }
+#sliderEndVal2{position:absolute; width: 2em; height: 2em; line-height: 2em; right: 0.2em; text-align: center; }
+
+#slider2 {position:absolute; height: 1.6em; left: 10%; bottom: 5%; width:77%; }
+#custom-handle2 {width: 3em; height: 1.6em; bottom: 5%; text-align: center; line-height: 1.6em; margin-top: 0.3em;}
+
+#runSeries2 {position: absolute; left: 0; font-weight:bold; font-size: large}
+
+/* Tab CSS
+
+  /* Style tab links */
+.tablink {
+background-color: rgb(165, 165, 165);
+color: white;
+float: right;
+top: 50px;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 30px 16px;
+position:relative;
+top: 805px;
+right: 11.5px;
+font-size: 15px;
+width: 5.52%;
+}
+
+.tablink:hover {
+background-color: #777;
+}

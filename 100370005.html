@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Africa Hunger and Food Security</title>
+	
+	<!-- this stylesheet works correctly with the slider, but the one listed in the JQuery UI demo does not (02Apr2022) -->
+	<link href="https://code.jquery.com/ui/1.13.1/themes/blitzer/jquery-ui.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src='http://code.jquery.com/jquery-3.6.0.min.js'></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	
+	<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/modules/accessibility.js"></script>	
+	<script type="text/javascript" src="https://code.highcharts.com/maps/modules/map.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/mapdata/custom/world-robinson.js"></script>
+	<script type="text/javascript" src="https://code.highcharts.com/mapdata/custom/africa.js"></script>
+
+	<script type="text/javascript" src="100370005.js"></script>
+	<script type="text/javascript" src="localstorage.js"></script>
+	<link rel="stylesheet" type="text/css" href="100370005.css">
+	
+</head>
+<header></header>
+<body>
+		<button class="tablink" onclick="openPage('Reference', this, 'green')">References</button>
+		<button class="tablink" onclick="openPage('Findings', this, 'blue')">Findings</button>
+		<button class="tablink" onclick="openPage('Visual', this, 'orange')"id="defaultOpen">Visual</button>
+
+		<div id="Reference" class="tabcontent">
+			<h3>References</h3>
+		<p>[1] “FAO Food Price Index | World Food Situation | Food and Agriculture Organization of the United Nations,” <i>www.fao.org</i>, Apr. 08, 2022. <a href="https://www.fao.org/worldfoodsituation/foodpricesindex/en/">https://www.fao.org/worldfoodsituation/foodpricesindex/en/</a></p>
+		<p>[2] “Global Food Security Index (GFSI),”<i>foodsecurityindex.eiu.com</i>, Apr. 08, 2022. <a href="https://impact.economist.com/sustainability/project/food-security-index/Index">https://impact.economist.com/sustainability/project/food-security-index/Index</a></p>
+		<p>[3] M. Roser and H. Ritchie, “Hunger and Undernourishment,” <i>Our World in Data</i>, Oct. 2019, [Online]. Available: <a href="https://ourworldindata.org/hunger-and-undernourishment#undernourishment">https://ourworldindata.org/hunger-and-undernourishment#undernourishment</a></p>
+		<p>[4] “FAOSTAT,” <i>www.fao.org</i>, Apr. 08, 2022. <a href="https://www.fao.org/faostat/en/#data/FS">https://www.fao.org/faostat/en/#data/FS</a></p>
+		<p>[5] “Data Development Hub,”  <i>datacatalog.worldbank.org</i>, 2020. <a href="https://datacatalog.worldbank.org/search/dataset/0037712">https://datacatalog.worldbank.org/search/dataset/0037712</a></p>	
+	</div>
+
+		<div id="Findings" class="tabcontent">
+		<h3>Key Findings</h3>
+		<ul>
+			<li>Countries in North Africa such as Morocco, Tunisia, Algeria, and Egypt have higher food security.</li>
+			<li>The percentages of African population that experienced food insecurity significantly rose from 47.3% in 2014 to nearly 60% in 2020. While the percentages of the World total population was only 30.4% in 2020.</li>
+			<li>Accompany with food insecurity, Food Price Index also doubled from 77 in 2005 to 142 in early 2022.</li>
+			<li>There was a surge in the Food Price Index from 99.2 in 2019 to 142 in 2022, which indicates some relationship between Covid-19 and Russia-Ukraine war to food prices.</li>
+			<li>On the brightside, the prevalence of undernourishment vs. GDP per capita chart shows that African countries are improving their undernourishment rate.</li>
+			<li>However, there are still some countries like Congo, Ethiopia, and Madagascar suffer from severe food insecurity (with more than 20% population undernourish and Food Security Index below 40).</li>
+		</ul>
+		<h3>Data resources</h3>
+		<ol>
+			<li><b>The Global Food Security Index (GFSI)</b> considers the issues of food affordability, availability, quality and safety, and natural resources and resilience across a set of 113 countries. <br> The index is a dynamic quantitative and qualitative benchmarking model constructed from 58 unique indicators that measure the drivers of food security across both developing and developed countries.</li>
+			<li><b>Food insecurity population percentages</b> and <b>Food Price Index</b> was both extracted from <a href="https://www.fao.org/faostat/en/#data/FS">FAO's website.</a></li>
+			<li><b>Undernourished percentage vs. GDP per capita</b> data was derived from <a href="https://ourworldindata.org/hunger-and-undernourishment#undernourishment">Ourworldindata's website.</a></li>
+		</ol>
+		<h3>Limitations</h3>
+		<ul>
+			<li>All 4 datasets on have missing data from some African countries, therefore, choosing a set of countries that are available is a must.</li>
+			<li><a href="https://www.fao.org/faostat/en/#data/FS">FAO's data </a> does not include iso-3 country code in their data. It is time-consuming to lookup for those values.</li>
+			<li>Most FAO's datasets do not have up-to-date data, usually with a lag of 2-3 years.</li>
+			<li>The data format are not compatible in Javascript so turning them into JSON is also time-consuming</li>
+			<li>Nevertheless, FAO provides data from all over the world, therefore, it is possible to use another subset for visualization purposes</li>
+		</ul>
+		</div>
+
+		<div id="Visual" class="tabcontent">
+			<div id="menubox"></div>
+			<div id="menubox2"></div>
+			<div id="displayarea"></div>
+			<div id="sliderbox2"></div>
+			<div id="sliderbox"></div>
+		</div>
+
+	  <script>
+		function openPage(pageName, elmnt, color) {
+		// Hide all elements with class="tabcontent" by default */
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Remove the background color of all tablinks/buttons
+		tablinks = document.getElementsByClassName("tablink");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].style.backgroundColor = "";
+		}
+
+		// Show the specific tab content
+		document.getElementById(pageName).style.display = "block";
+
+		// Add the specific color to the button used to open the tab content
+		elmnt.style.backgroundColor = color;
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+		</script>
+</body>
+</html>
+
