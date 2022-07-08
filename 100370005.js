@@ -502,7 +502,7 @@ $(function () {
 		var year = 2001;
 		var start = 2001;
 		var finish = 2017;
-		var seriesPath = 'https://raw.githubusercontent.com/binhminh98/Information-Visualization/main/undernorished.json';
+		var seriesPath = 'https://raw.githubusercontent.com/binhminh98/Information-Visualization/main/Data/undernorished.json';
 		//var seriesPath = 'http://visdemos.projects.cmp.uea.ac.uk/data/OECD_GDP_head_all.json';
 		//var seriesPath = 'localhost:8081/resources/data/OECD_GDP_head_all.json';
 		//var seriesPath = 'data/OECD_GDP_head_all.json';
@@ -714,7 +714,7 @@ $(function () {
 	var year = 2012;
 	var start = 2012;
 	var finish = 2021;
-	var seriesPath = 'https://raw.githubusercontent.com/binhminh98/Information-Visualization/main/food_security_index.json';
+	var seriesPath = 'https://raw.githubusercontent.com/binhminh98/Information-Visualization/main/Data/food_security_index.json';
 	//var seriesPath = 'http://visdemos.projects.cmp.uea.ac.uk/data/OECD_GDP_head_all.json';
 	//var seriesPath = 'localhost:8081/resources/data/OECD_GDP_head_all.json';
 	//var seriesPath = 'data/OECD_GDP_head_all.json';
