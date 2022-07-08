@@ -1,5 +1,5 @@
 # :star2: Information Visualization :star2: #
-## :ramen:  A web deployable dashboard: “AFRICA HUNGER AND FOOD INSECURITY” :ramen: ##
+## :ramen:  A web deployable dashboard: “Africa Hunger and Food Insecurity” :ramen: ##
 
 ![image](https://user-images.githubusercontent.com/100490285/178079300-0730ef39-c2b0-4f0d-a4d6-795c27089258.png)
 
